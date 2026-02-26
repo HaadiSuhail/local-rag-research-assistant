@@ -1,0 +1,14 @@
+model:
+  name: microsoft/Phi-3-mini-4k-instruct
+  load_in_4bit: true
+
+retrieval:
+  top_k: 3
+
+generation:
+  max_new_tokens: 120 # set how long the answer should be 
+  repetition_penalty: 1.05 # the higher the less repetition
+
+chunking:
+  chunk_size: 800 # How much text is inside each retrievable unit.
+  overlap: 150 # How much adjacent chunks overlap.

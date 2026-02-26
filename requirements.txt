@@ -1,0 +1,28 @@
+# Core ML
+transformers
+accelerate
+bitsandbytes
+torch
+torchvision
+
+# Embeddings
+sentence-transformers
+
+# Vector Store
+faiss-cpu
+numpy
+scikit-learn
+
+# PDF Processing
+pypdf
+pymupdf
+
+# Config & Utils
+pyyaml
+tqdm
+
+# LangChain Ecosystem
+langchain
+langchain-core
+langchain-community
+langchain-huggingface

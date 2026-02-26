@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+venv/
+
+# HuggingFace cache
+.cache/
+
+# Data
+data/raw/*
+data/lc_index/*
+data/index/*
+data/processed/*
+
+# OS
+.DS_Store
+Thumbs.db
