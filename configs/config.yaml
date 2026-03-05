@@ -2,13 +2,37 @@ model:
   name: microsoft/Phi-3-mini-4k-instruct
   load_in_4bit: true
 
+embedding:
+  model_name: BAAI/bge-large-en-v1.5
+  # model_name: BAAI/bge-small-en-v1.5
+
+vectorstore:
+  path: data/lc_index
+
 retrieval:
-  top_k: 3
+  top_k: 10
+  search_type: mmr
 
 generation:
-  max_new_tokens: 120 # set how long the answer should be 
+  max_new_tokens: 180 # set how long the answer should be 
   repetition_penalty: 1.05 # the higher the less repetition
 
-chunking:
-  chunk_size: 800 # How much text is inside each retrievable unit.
-  overlap: 150 # How much adjacent chunks overlap.
+debug:
+  rag_tracing: true
+
+prompt_template: |
+  You are an AI research assistant.
+
+  Answer the question using ONLY the context below.
+
+  If the answer cannot be found in the context, say:
+  "The context does not contain this information."
+
+  Context:
+  {context}
+
+  Question:
+  {question}
+
+  Answer with concise bullet points.
+  Do NOT repeat the context.

@@ -1,0 +1,10 @@
+[
+  {
+    "question": "How does ReAct combine reasoning and acting?",
+    "ground_truth_source": "2022_Yao_ReAct_Reasoning_Acting_LLMs"
+  },
+  {
+    "question": "What are the contributions of the ReAct paper?",
+    "ground_truth_source": "2022_Yao_ReAct_Reasoning_Acting_LLMs"
+  }
+]
